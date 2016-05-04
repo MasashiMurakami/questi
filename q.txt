@@ -1,0 +1,10 @@
+				<tr><th>和風</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue1(this.value)" name="q1" value="q1_1"/></th><th>洋風</th><th><span id="q1">0</span></th></tr>
+				<tr><th>大胆</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue2(this.value)" name="q1" value="q1_2"/></th><th>繊細</th><th><span id="q2">0</span></th></tr>
+				<tr><th>印象的な</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue3(this.value)" name="q1" value="q1_3"/></th><th>印象が弱い</th><th><span id="q3">0</span></th></tr>
+				<tr><th>美しい</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue4(this.value)" name="q1" value="q1_4"/></th><th>汚い</th><th><span id="q4">0</span></th></tr>
+				<tr><th>好きな</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue5(this.value)" name="q1" value="q1_5"/></th><th>嫌いな</th><th><span id="q5">0</span></th></tr>
+				<tr><th>軽い</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue6(this.value)" name="q1" value="q1_6"/></th><th>重い</th><th><span id="q6">0</span></th></tr>
+				<tr><th>陽気な</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue7(this.value)" name="q1" value="q1_7"/></th><th>陰気な</th><th><span id="q7">0</span></th></tr>
+				<tr><th>緊張した</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue5(this.value)" name="q1" value="q1_5"/></th><th>ゆるんだ</th><th><span id="q8">0</span></th></tr>
+				<tr><th>涼しげ</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue6(this.value)" name="q1" value="q1_6"/></th><th>温かい</th><th><span id="q9">0</span></th></tr>
+				<tr><th>落ち着きのある</th><th><input type="range" min="-3" max="3" value="0" step="1" onchange="showValue7(this.value)" name="q1" value="q1_7"/></th><th>活動的</th><th><span id="q10">0</span></th></tr>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="slider.js"></script>
+	<script type="text/javascript">
+		//document.ontouchmove=function(e) { e.preventDefault(); }
+	
+	</script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>anch</title>
+</head>
+<body>
+	<form name="form1" method="post" action="kaku.php">
+		Online Questionnaire System (DB Not connected)
+		<p>名前<input name="name" type="text" id="name" style="width:200px; height:50px; font-size:2.4em">
+		<p>曲番<input name="music" type="text" id="music" style="width:200px; height:50px; font-size:2.4em">
+		<details>
+			<summary>点数の付け方は以下を参考に</summary>
+			<table>
+				<tr><th>非常に</th><th>かなり</th><th>やや</th><th>どちらとも</th><th>やや</th><th>かなり</th><th>非常に</th></tr>
+				<tr><th>3</th><th>2</th><th>1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+			</table>
+		</details>
+		<br>
+		<table border="0">
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q1-1">0</span></th>
+					<th width="200"><p div id="image01-1">寒い</p></th>
+					<th><span id="q1">0</span></th>
+					<th width="200"><p div id="image01-2">暑い</p></th>
+					<th rowspan="2"><span id="q1-2">0</span></th>
+				</tr>
+				<tr>
+					<th colspan="3"><input id="slider01" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image01-1','image01-2','q1')" name="q1" value="q1-1"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q2-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image02-1">快適な</p></th>
+					<th ><span id="q2">0</span></th>
+					<th rowspan="2" width="300"><p div id="image02-2">不快な</p></th>
+					<th rowspan="2"><span id="q2-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider02" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image02-1','image02-2','q2')" name="q2" value="q1-2"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q3-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image03-1">親しみやすい</p></th>
+					<th><span id="q3">0</span></th>
+					<th rowspan="2" width="300"><p div id="image03-2">親しみにくい</p></th>
+					<th rowspan="2"><span id="q3-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider03" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image03-1','image03-2','q3')" name="q3" value="q1_3"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q4-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image04-1">無粋な</p></th>
+					<th><span id="q4">0</span></th>
+					<th rowspan="2" width="300"><p div id="image04-2">趣のある</p></th>
+					<th rowspan="2"><span id="q4-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider04" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image04-1','image04-2','q4')" name="q4" value="q1_4"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q5-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image05-1">騒がしい</p></th>
+						<th><span id="q5">0</span></th>
+					<th rowspan="2" width="300"><p div id="image05-2">物静かな</p></th>
+					<th rowspan="2"><span id="q5-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider05" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image05-1','image05-2','q5')" name="q5" value="q1_5"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q6-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image06-1">好ましい</p></th>
+					<th><span id="q6">0</span></th>
+					<th rowspan="2" width="300"><p div id="image06-2">好ましくない</p></th>
+					<th rowspan="2"><span id="q6-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider06" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image06-1','image06-2','q6')" name="q6" value="q1_6"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q7-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image07-1">強い</p></th>
+					<th><span id="q7">0</span></th>
+					<th rowspan="2" width="300"><p div id="image07-2">弱い</p></th>
+					<th rowspan="2"><span id="q7-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider07" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image07-1','image07-2','q7')" name="q7" value="q1_7"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q8-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image08-1">豊かな</p></th>
+					<th><span id="q8">0</span></th>
+					<th rowspan="2" width="300"><p div id="image08-2">貧しい</p></th>
+					<th rowspan="2"><span id="q8-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider08" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image08-1','image08-2','q8')" name="q8" value="q1_8"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q9-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image09-1">秩序のある</p></th>
+					<th><span id="q9">0</span></th>
+					<th rowspan="2" width="300"><p div id="image09-2">混沌とした</p></th>
+					<th rowspan="2"><span id="q9-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider09" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image09-1','image09-2','q9')" name="q9" value="q1_9"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q10-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image10-1">拡がりのある</p></th>
+					<th><span id="q10">0</span></th>
+					<th rowspan="2" width="300"><p div id="image10-2">拡がりのない</p></th>
+					<th rowspan="2"><span id="q10-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider10" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image10-1','image10-2','q10')" name="q10" value="q1_10"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q11-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image11-1">鈍い</p></th>
+					<th><span id="q11">0</span></th>
+					<th rowspan="2" width="300"><p div id="image11-2">鋭い</p></th>
+					<th rowspan="2"><span id="q11-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider11" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image11-1','image11-2','q11')" name="q11" value="q1_11"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q12-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image12-1">迫力のある</p></th>
+					<th><span id="q12">0</span></th>
+					<th rowspan="2" width="300"><p div id="image12-2">物足りない</p></th>
+					<th rowspan="2"><span id="q12-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider12" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image12-1','image12-2','q12')" name="q12" value="q1_12"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q13-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image13-1">からっとした</p></th>
+					<th><span id="q13">0</span></th>
+					<th rowspan="2" width="300"><p div id="image13-2">じめじめした</p></th>
+					<th rowspan="2"><span id="q13-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider13" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image13-1','image13-2','q13')" name="q13" value="q1_13"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q14-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image14-1">季節感のある</p></th>
+					<th><span id="q14">0</span></th>
+					<th rowspan="2" width="300"><p div id="image14-2">季節感のない</p></th>
+					<th rowspan="2"><span id="q14-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider14" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image14-1','image14-2','q14')" name="q14" value="q1_14"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q15-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image15-1">固い</p></th>
+					<th><span id="q15">0</span></th>
+					<th rowspan="2" width="300"><p div id="image15-2">柔らかい</p></th>
+					<th rowspan="2"><span id="q15-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider15" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image15-1','image15-2','q15')" name="q15" value="q1_15"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q16-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image16-1">洗練された</p></th>
+					<th><span id="q16">0</span></th>
+					<th rowspan="2" width="300"><p div id="image16-2">素朴な</p></th>
+					<th rowspan="2"><span id="q16-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider16" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image16-1','image16-2','q16')" name="q16" value="q1_16"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q17-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image17-1">肌寒い</p></th>
+					<th><span id="q17">0</span></th>
+					<th rowspan="2" width="300"><p div id="image17-2">汗ばむような</p></th>
+					<th rowspan="2"><span id="q17-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider17" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image17-1','image17-2','q17')" name="q17" value="q1_17"/></th>
+				</tr>
+				
+				<tr valign="middle" height="200">
+					<th rowspan="2"><span id="q18-1">0</span></th>
+					<th rowspan="2" width="300"><p div id="image18-1">違和感のある</p></th>
+					<th><span id="q18">0</span></th>
+					<th rowspan="2" width="300"><p div id="image18-2">調和のとれた</p></th>
+					<th rowspan="2"><span id="q18-2">0</span></th>
+				</tr>
+				<tr>
+					<th><input id="slider18" type="range" min="-300" max="300" value="0" step="1" onchange="changeFontSize(this.id,'image18-1','image18-2','q18')" name="q18" value="q1_18"/></th>
+				</tr>
+				
+		</table>
+		<p><input type="submit" value="Submit" style="width:200px; height:50px; font-size:2.4em">
+	</form>
+</body>
+</html>
